@@ -6,7 +6,7 @@ package com.mbragg;
  *
  */
 @FunctionalInterface
-public interface TwoElementPredicate<T> {
+public interface TwoElementPredicate <T> {
 
     public boolean twoTypeTest(T t1, T t2);
 

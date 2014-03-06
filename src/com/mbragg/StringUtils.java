@@ -3,6 +3,7 @@ package com.mbragg;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**
@@ -57,6 +58,15 @@ public class StringUtils {
     public static <T> List<T> allMatchesGeneric(List<T> genericList, Predicate<T> predicate) {
         ArrayList<T> result = new ArrayList<>();
         genericList.stream().filter(predicate::test).forEach(result::add);
+        return result;
+    }
+
+
+    // Applys a given function to every item in a list of strings
+    public static List<String> transformedList(List<String> stringList, Function<String, String> stringStringFunction) {
+        List<String> result = new ArrayList<>();
+
+        stringList.stream().map(stringStringFunction).forEach(result::add);
         return result;
     }
 }
