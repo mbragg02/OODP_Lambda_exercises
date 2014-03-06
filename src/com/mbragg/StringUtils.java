@@ -69,5 +69,13 @@ public class StringUtils {
         stringList.stream().map(stringStringFunction).forEach(result::add);
         return result;
     }
+
+      // Applys a given function to every item in a generic list
+    public static <T> List<T> transformedListGeneric(List<T> stringList, Function<T, T> stringStringFunction) {
+        List<T> result = new ArrayList<>();
+
+        stringList.stream().map(stringStringFunction).forEach(result::add);
+        return result;
+    }
 }
 
