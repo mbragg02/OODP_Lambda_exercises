@@ -8,7 +8,7 @@ public class Q4 {
 
     public static void main(String[] args) {
 
-        System.out.println(StringUtils.betterEntry("michael", "sam", (t1,t2) -> t1.toString().length() < t2.toString().length()));
+        System.out.println(StringUtils.betterEntry("michael", "sam", (t1, t2) -> t1.length() < t2.length()));
 
 
     }

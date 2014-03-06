@@ -39,7 +39,7 @@ public class StringUtils {
     }
 
     // Generic two element Predicate. Custom interface "TwoelementPredicate"
-    public static <T> T betterEntry(T t1, T t2, TwoElementPredicate x) {
+    public static <T> T betterEntry(T t1, T t2, TwoElementPredicate<T> x) {
         if (x.twoTypeTest(t1, t2)) {
             return t1;
         } else {
@@ -62,7 +62,7 @@ public class StringUtils {
     }
 
 
-    // Applys a given function to every item in a list of strings
+    // Applies a given function to every item in a list of strings
     public static List<String> transformedList(List<String> stringList, Function<String, String> stringStringFunction) {
         List<String> result = new ArrayList<>();
 
@@ -70,7 +70,7 @@ public class StringUtils {
         return result;
     }
 
-      // Applys a given function to every item in a generic list
+      // Applies a given function to every item in a generic list
     public static <T> List<T> transformedListGeneric(List<T> stringList, Function<T, T> stringStringFunction) {
         List<T> result = new ArrayList<>();
 
